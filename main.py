@@ -434,7 +434,7 @@ def send_email(receiver_emails, subject, body):
 
     port = 465  # For SSL
     email = "" # Removed for demo
-    password = "pdps zfjb hkff fypb"  # Application password (removed for demo)
+    password = ""  # Application password (removed for demo)
 
     # Create a secure SSL context
     context = ssl.create_default_context()
