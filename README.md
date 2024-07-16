@@ -16,7 +16,9 @@ I used various Python libraries to develop this application.
 
 For the web scraping portion of the project, I used Selenium to create an automated web browser, I used bs4 (Beautiful Soup) to parse the HTML, and finally pandas to clean and manipulate the scraped data. 
 
-For the email portion of the project, I used the SMTPLib, SSL, and Email.MIME libraries to send secure automated emails through Gmail. 
+For the email portion of the project, I used the SMTPLib, SSL, and Email.MIME libraries to send secure automated emails through Gmail.
 
 For the spreadsheet portion of the project, I used the Dropbox SDK to access and save the file, then pandas and openpyxl to manipulate the data within the file. 
+
+I then used Windows Task Scheduler to run this script daily. 
 
