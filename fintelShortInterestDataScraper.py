@@ -79,7 +79,7 @@ def login_to_fintel(username, password):
     
     return driver
 
-# Web scraping function
+# Fintel scraping function
 def scrape_fintel_data(driver, stock_ticker, table_name):
     '''Connects to Fintel using Selenium. Uses Beautiful Soup to parse HTML. Converts HTML to a Pandas DataFrame. Returns the DataFrame'''
 
@@ -134,17 +134,6 @@ def create_yahoo_driver():
     # chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     # chrome_options.add_experimental_option('useAutomationExtension', False)
     driver = webdriver.Chrome(options=chrome_options)
-
-    # Use selenium stealth as needed 
-
-    # stealth(driver,
-    #     languages=["en-US", "en"],
-    #     vendor="Google Inc.",
-    #     platform="Win32",
-    #     webgl_vendor="Intel Inc.",
-    #     renderer="Intel Iris OpenGL Engine",
-    #     fix_hairline=True,
-    #     )
     
     return driver
 
@@ -385,9 +374,8 @@ def create_dropbox_instance(APP_KEY, APP_SECRET, REFRESH_TOKEN):
                     app_secret= APP_SECRET,
                     oauth2_refresh_token= REFRESH_TOKEN
     )
-    # my_id = dbx.team_members_list().members[15].profile.team_member_id #15 is mattc
     for member in dbx.team_members_list().members:
-        if member.profile.email == "mattc@dugganinvestments.com":
+        if member.profile.email == "": # email removed for demo
             my_id = member.profile.team_member_id
             return dbx.as_user(my_id)
     return None
@@ -445,18 +433,18 @@ def upload_excel_to_dropbox(dbx, excel_data, dropbox_folder_path, dropbox_file_n
 def send_email(receiver_emails, subject, body):
 
     port = 465  # For SSL
-    email = "dugganinvautomation@gmail.com"
-    password = "pdps zfjb hkff fypb"  # App password not real password
+    email = "" # Removed for demo
+    password = "pdps zfjb hkff fypb"  # Application password (removed for demo)
 
     # Create a secure SSL context
     context = ssl.create_default_context()
 
-    sender_email = "dugganinvautomation@gmail.com"
+    sender_email = "" # Removed for demo
 
     # Create the MIME object
     message = MIMEMultipart()
     message['Subject'] = subject
-    message['From'] = "Duggan Automated Updates" + f'<{sender_email}>'
+    message['From'] = "" + f'<{sender_email}>' # Removed for demo
     message['To'] = ", ".join(receiver_emails)
 
     # Attach HTML body
