@@ -514,7 +514,7 @@ def main():
     body = "<html><body>"
     body += f"""
                 <p>
-                This is a short interest update for Summit Therapeutics and Pulse Biosciences as of {datetime.now().strftime("%Y-%m-%d %H:%M")}.<br><br>
+                This is a short interest update for ___stock A___ and __stock B___ as of {datetime.now().strftime("%Y-%m-%d %H:%M")}.<br><br>
                 See current short interest data and historical NASDAQ data for each stock in the tables below.
                 The data was sourced from <a href="https://finance.yahoo.com/">Yahoo Finance</a> and <a href="https://fintel.io/">Fintel.</a>
                 </p>
