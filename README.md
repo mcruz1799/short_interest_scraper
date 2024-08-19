@@ -20,7 +20,7 @@ For the email portion of the project, I used the SMTPLib, SSL, and Email.MIME li
 
 For the spreadsheet portion of the project, I used the Dropbox SDK to access and save the file, then pandas and openpyxl to manipulate the data within the file. 
 
-I then used Windows Task Scheduler to run this script daily. 
+I then used Windows Task Scheduler to run a batch script that runs this scraper along with two others on a daily basis. 
 
 See "main.py" for the code. 
 
